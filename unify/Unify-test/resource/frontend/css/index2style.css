@@ -1,0 +1,13 @@
+
+
+@media (min-width:760px){ 
+.container{width:640px; min-width: 320px;}
+.carousel-inner{width:640px; margin:0 auto;}
+}
+
+.content-md{margin:20px auto; padding:0;}
+.sh-list{width:49%; float:right; padding:15px; border:1px solid #ccc; overflow: hidden;margin:8px 0;}
+.sh-list2{float:left;}
+.pricebox span{float: right; }
+.pricebox .price{float: left; color:red;font-weight: bold;}
+.tradename{margin:10px 0 5px; color:#999;}

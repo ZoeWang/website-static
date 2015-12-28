@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>应用方法</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>	
+
+<body>
+
+<p>Backstretch是一款简单的jQuery插件，可以帮助你给网页添加一个动态的背景图片，可以自动调整大小适应屏幕的尺寸，当然这样做的缺点是当图片尺寸比屏幕小的时候,图片会因为自动延伸而变形，所以我们可以劲量使用高分辨率大尺寸的图片做背景,更重要的是支持图片的自动切换。</p>
+
+<p>Backstretch的使用也很方便，首先是添加下面必须的JS代码到页面的Head标签内。</p>
+<h3>引入js</h3>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+<script type="text/javascript" src="/jquery.backstretch.min.js"></script>
+
+<p>接着就是添加下面的JS代码配置你的背景图片。</p>
+<script>
+    // Create an array of images that you'd like to use
+    var images = [
+        "pot-holder.jpg",//此处为自定义的图片，要注意图片的路径
+        "coffee.jpg"//此处为自定义的图片，要注意图片的路径
+    ];
+
+    // A little script for preloading all of the images
+    // It's not necessary, but 一般 a good idea
+    $(images).each(function(){
+       $('<img/>')[0].src = this;
+    });
+
+    // The index variable will keep track of which image is currently showing
+    // 索引变量将跟踪的图像是目前显示
+    var index = 0;
+
+    // Call backstretch for the first time,
+    // In this case, 我设置的速度500毫秒之间的渐显的效果图片.
+    $.backstretch(images[index], {speed: 500});
+
+    // 设置一个时间间隔,增量索引并设置新image
+    // Note: The fadeIn speed set above will be inherited  上面的渐显速度设置将被继承
+    setInterval(function() {
+        index = (index >= images.length - 1) ? 0 : index + 1;
+        $.backstretch(images[index]);
+    }, 5000);
+</script>
+<p>就这么简单，自定义背景图片切换就完成了。</p>
+<p>如果你想通过点击按钮去改变背景图片，你可以通过下面的代码去完成。</p>
+<p>1、Body标签内添加两个按钮</p>
+
+<button id="outside">点击此处显示图片1</button>
+<button id="cheers">点击此处显示图片1</button>
+
+添加下面的JS配置代码
+<script>
+$("#outside").click(function(e) {
+    e.preventDefault();
+    $.backstretch('images/outside.jpg');//注意调用图片的路径
+});
+
+$("#cheers").click(function(e) {
+    e.preventDefault();
+    $.backstretch('images/cheers.jpg');//注意调用图片的路径
+});
+
+</script>
+<p>以上就是由Srobbin提供的jQuery动态设置网页背景图片的方法，喜欢的朋友可以访问官网（http://srobbin.com/jquery-plugins/backstretch）查看，或者通过Github关注作者。</p>
+
+<script>
+    $.backstretch([
+        "assets/img/bg/4.jpg",
+        "assets/img/bg/8.jpg",
+        "assets/img/bg/5.jpg",
+        ], {
+        fade: 1000,
+        duration: 7000
+    });
+</script>
+
+</body>
+</html>

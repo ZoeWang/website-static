@@ -1,0 +1,290 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+<title>cart</title>
+	<!-- meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+	<!-- Favicon -->
+    <!--    <link rel="shortcut icon" href="">-->
+	<!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="resource/vendor/bootstrap3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resource/vendor/unify/css/shop.style.css">
+
+    <!-- CSS Implementing Plugins -->   
+   	 <link rel="stylesheet" href="resource/vendor/unify/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="resource/vendor/unify/plugins/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="resource/vendor/unify/plugins/scrollbar/src/perfect-scrollbar.css">
+      <link rel="stylesheet" href="resource/vendor/unify/plugins/jquery-steps/css/custom-jquery.steps.css">
+        <!-- CSS Theme -->
+    <link rel="stylesheet" href="resource/vendor/unify/css/theme-colors/default.css">
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="resource/vendor/unify/css/custom.css">
+    <link rel="stylesheet" href="resource/frontend/css/cartstyle.css">
+
+</head>
+<!--header-->
+<body>
+<div class="header-v1 header-static">
+        <!-- Topbar v3 -->
+        <div class="topbar-v3">
+            <div class="search-open">
+                <div class="container">
+                    <input type="text" placeholder="Search" class="form-control">
+                    <div class="search-close"><i class="icon-close"></i></div>
+                </div>    
+            </div>
+
+            <div class="container">
+                    <div class="col-sm-12">
+                        <ul class="list-inline right-topbar pull-right">
+                            <li><a href="#">Account</a></li>
+                            <li><a href="#">Wishlist (0)</a></li>
+                            <li><a href="login.html">Login</a> | <a href="#">Register</a></li>
+                            <li><i class="search fa fa-search search-button"></i></li>
+                        </ul>
+                    </div>
+            </div><!--/container-->
+        </div>
+        <!-- End Topbar v3 -->
+
+        <!-- Navbar -->
+        <div role="navigation" class="navbar navbar-default mega-menu header">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button data-target=".navbar-responsive-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a>
+                        <img alt="Logo" src="resource/frontend/css/imgs/logo.png" id="logo-header">
+                    </a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-responsive-collapse">
+                    <ul class="nav navbar-nav">
+                        <!-- Pages -->
+                        <li class="active">
+                            <a href="index.html">
+                                HOME
+                            </a>
+                        </li>
+
+                        <!-- Gifts -->
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="javascript:void(0);">
+                                Kind
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Clothes</a></li>
+                                <li><a href="#">Trousers</a></li>
+                                <li><a href="#">Shoes</a></li>
+                                <li><a href="#">Socks</a></li>
+                                <li><a href="#">Bag</a></li>
+                                <li><a href="login.html">Box</a></li>
+                            </ul><!--/end dropdown-menu-->
+                        </li>
+                        <!-- End Gifts -->
+
+                        <!-- Books -->
+                        <li><a href="aboutus.html">ABOUT US</a></li>
+                        <!-- End Books -->
+
+                        <!-- Main Demo -->
+                        <li><a href="contacts.html">CONTACT</a></li>
+                        <!-- Main Demo -->
+                    </ul>
+                </div><!--/navbar-collapse-->
+            </div>    
+        </div>            
+        <!-- End Navbar -->
+</div>
+<!--content-->
+    <!--=== Content Medium Part ===-->
+    <div class="content-md margin-bottom-30">
+        <div class="container center">
+            <form class="shopping-cart" action="#">
+                <div class="orderwrap">
+                    <div class="table-responsive">
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Price</th>
+                                    <th>Qty</th>
+                                    <th>Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="product-in-table">
+                                        <img class="img-responsive orderimg" src="resource/frontend/images/thumb/02.jpg" alt="">
+                                        <div class="ordername">
+                                            <h3>Double</h3>
+                                        </div>    
+                                    </td>
+                                    <td>$ 160.00</td>
+                                    <td>
+                                        <button type='button' class="quantity-button" name='subtract' onclick='javascript: subtractQty1();' value='-'>-</button>
+                                        <input type='text' class="quantity-field" name='qty1' value="5" id='qty1'/>
+                                        <button type='button' class="quantity-button" name='add' onclick='javascript: document.getElementById("qty1").value++;' value='+'>+</button>
+                                    </td>
+                                    <td class="shop-red">$ 320.00</td>
+                                    <td>
+                                        <button type="button" class="close"><span>&times;</span><span class="sr-only">Close</span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="product-in-table">
+                                        <img class="img-responsive orderimg" src="resource/frontend/images/thumb/08.jpg" alt="">
+                                        <div class="product-it-in ordername">
+                                            <h3>Vivamus</h3>
+                                        </div>    
+                                    </td>
+                                    <td>$ 160.00</td>
+                                    <td>
+                                        <button type='button' class="quantity-button" name='subtract' onclick='javascript: subtractQty2();' value='-'>-</button>
+                                        <input type='text' class="quantity-field" name='qty2' value="3" id='qty2'/>
+                                        <button type='button' class="quantity-button" name='add' onclick='javascript: document.getElementById("qty2").value++;' value='+'>+</button>
+                                    </td>
+                                    <td class="shop-red">$ 320.00</td>
+                                    <td>
+                                        <button type="button" class="close"><span>&times;</span><span class="sr-only">Close</span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="product-in-table">
+                                        <img class="img-responsive orderimg" src="resource/frontend/images/thumb/03.jpg" alt="">
+                                        <div class="product-it-in ordername">
+                                            <h3>Vivamus</h3>
+                                        </div>    
+                                    </td>
+                                    <td>$ 160.00</td>
+                                    <td>
+                                        <button type='button' class="quantity-button" name='subtract' onclick='javascript: subtractQty3();' value='-'>-</button>
+                                        <input type='text' class="quantity-field" name='qty3' value="1" id='qty3'/>
+                                        <button type='button' class="quantity-button" name='add' onclick='javascript: document.getElementById("qty3").value++;' value='+'>+</button>
+                                    </td>
+                                    <td class="shop-red">$ 320.00</td>
+                                    <td>
+                                        <button type="button" class="close"><span>&times;</span><span class="sr-only">Close</span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="product-in-table">
+                                        <img class="img-responsive orderimg" src="resource/frontend/images/thumb/04.jpg" alt="">
+                                        <div class="product-it-in ordername">
+                                            <h3>Vivamus</h3>
+                                        </div>    
+                                    </td>
+                                    <td>$ 160.00</td>
+                                    <td>
+                                        <button type='button' class="quantity-button" name='subtract' onclick='javascript: subtractQty4();' value='-'>-</button>
+                                        <input type='text' class="quantity-field" name='qty4' value="7" id='qty4'/>
+                                        <button type='button' class="quantity-button" name='add' onclick='javascript: document.getElementById("qty4").value++;' value='+'>+</button>
+                                    </td>
+                                    <td class="shop-red">$ 320.00</td>
+                                    <td>
+                                        <button type="button" class="close"><span>&times;</span><span class="sr-only">Close</span></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="product-in-table">
+                                        <img class="img-responsive orderimg" src="resource/frontend/images/thumb/03.jpg" alt="">
+                                        <div class="product-it-in ordername">
+                                            <h3>Vivamus</h3>
+                                        </div>    
+                                    </td>
+                                    <td>$ 160.00</td>
+                                    <td>
+                                        <button type='button' class="quantity-button" name='subtract' onclick='javascript: subtractQty4();' value='-'>-</button>
+                                        <input type='text' class="quantity-field" name='qty4' value="7" id='qty4'/>
+                                        <button type='button' class="quantity-button" name='add' onclick='javascript: document.getElementById("qty4").value++;' value='+'>+</button>
+                                    </td>
+                                    <td class="shop-red">$ 320.00</td>
+                                    <td>
+                                        <button type="button" class="close"><span>&times;</span><span class="sr-only">Close</span></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div> 
+            </form>
+
+        </div>
+        <div class="total">
+            Total : <strong> $ 545</strong>
+        </div>
+        <div class="next">
+            <a href="order.html">NEXT</a>
+        </div>
+    </div>
+    <!--=== End Content Medium Part ===-->     
+
+    <!--=== End Shop Suvbscribe ===-->
+
+    <div class="bottom-menu">
+         <a href="index.html">
+            <span class="glyphicon glyphicon-home">Home</span>
+         </a>
+         <a href="#">
+             <span class="glyphicon glyphicon-volume-down">Contact</span>
+         </a>
+         <a href="#">
+             <span class="glyphicon glyphicon-search">Search</span>
+         </a>
+         <a href="#">
+             <span class="glyphicon glyphicon-list">List</span>
+         </a>
+    </div>
+    <!--=== End Shop Product ===-->
+
+
+
+
+<!-- JS Global Compulsory -->
+<script src="resource/vendor/jquery1.9.1/jquery-1.9.1.min.js"></script>
+<script src="resource/vendor/jquery1.9.1/jquery-migrate.js"></script>
+<script src="resource/vendor/bootstrap3.2/js/bootstrap.min.js"></script>
+
+<!-- JS Implementing Plugins -->
+<script src="resource/vendor/unify/plugins/back-to-top.js"></script>
+<script src="resource/vendor/unify/plugins/owl-carousel/owl-carousel/owl.carousel.js"></script>
+
+<!-- Master Slider -->
+<script src="resource/vendor/unify/plugins/master-slider/quick-start/masterslider/masterslider.min.js"></script>
+<script src="resource/vendor/unify/plugins/master-slider/quick-start/masterslider/jquery.easing.min.js"></script>
+
+<!-- Scrollbar -->
+<script src="resource/vendor/unify/plugins/scrollbar/src/jquery.mousewheel.js"></script>
+<script src="resource/vendor/unify/plugins/scrollbar/src/perfect-scrollbar.js"></script>
+
+<!-- JS Customization -->
+<script src="resource/vendor/unify/js/custom.js"></script>
+<!-- JS Page Level -->
+<script src="resource/vendor/unify/js/shop.app.js"></script>
+<script src="resource/vendor/unify/js/plugins/owl-carousel.js"></script>
+<script src="resource/vendor/unify/js/plugins/master-slider.js"></script>
+<script src="resource/vendor/unify/js/forms/product-quantity.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        App.init();
+        OwlCarousel.initOwlCarousel();
+        MasterSliderShowcase2.initMasterSliderShowcase2();      
+    });
+</script>
+<!--[if lt IE 9]>
+    <script src="resource/vendor/bootstrap3.2/js/respond.min.js"></script>
+    <script src="resource/vendor/bootstrap3.2/js/html5shiv.min.js"></script>
+    <script src="resource/vendor/unify/js/plugins/placeholder-IE-fixes.js"></script>
+<![endif]-->
+</body>
+</html>

@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->
+
+<head>
+    <title>Unify | Login Page...</title>
+
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- CSS Global Compulsory -->
+    <link rel="stylesheet" href="resource/vendor/bootstrap3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resource/vendor/unify/css/style.css">
+
+    <!-- CSS Implementing Plugins -->
+    <link rel="stylesheet" href="resource/vendor/unify/plugins/line-icons/line-icons.css">
+    <link rel="stylesheet" href="resource/vendor/unify/plugins/font-awesome/css/font-awesome.min.css">
+
+    <!-- CSS Page Style -->    
+    <link rel="stylesheet" href="resource/vendor/unify/css/pages/page_log_reg_v1.css">    
+
+    <!-- CSS Theme -->    
+    <link rel="stylesheet" href="resource/vendor/unify/css/theme-colors/default.css">
+
+    <!-- CSS Customization -->
+    <link rel="stylesheet" href="resource/vendor/unify/css/custom.css">
+    <style>body{background:#f5f4f2;}</style>
+</head>
+
+<body>
+<div class="wrapper"> 
+  <!--=== Header ===-->
+  <div class="header"> 
+    <div class="topbar">
+            <div class="container">
+                <!-- Topbar Navigation -->
+                <ul class="loginbar pull-right">  
+                    <li><a href="page_login.html" > 登录 </a></li>
+                    <li class="topbar-devider"></li>
+            		<li><a href="page_register.html"  > 注册 </a></li> 
+                </ul>
+                <!-- End Topbar Navigation -->
+            </div>
+        </div>
+    <!-- Navbar -->
+    <div class="navbar navbar-default mega-menu" role="navigation">
+      <div class="container"> 
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse"> <span class="sr-only">Toggle navigation</span> <span class="fa fa-bars"></span> </button>
+          <a class="navbar-brand" href="index.html"> <img id="logo-header" src="resource/vendor/unify/img/logo1-default.png" alt="Logo"> </a> </div>
+        
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-responsive-collapse">
+          <ul class="nav navbar-nav">
+            <!-- Home -->
+            <li class="active"> <a href="list.html"> 文档首页 </a>
+              
+            </li>
+            <!-- End Home --> 
+            
+            <!-- Pages -->
+            <li> <a href="message.html"> 开发指南 </a>
+              
+            </li>
+            <!-- End Pages --> 
+            
+            <!-- Features -->
+            <li class="dropdown mega-menu-fullwidth"> <a href="javascript:void(0);"> API文档 </a>
+              
+            </li>
+            <!-- End Features --> 
+            
+            <!-- Portfolio -->
+            <li class="dropdown mega-menu-fullwidth"> <a href="javascript:void(0);"> 资源下载 </a>
+            </li>
+            <!-- Ens Portfolio --> 
+            
+            <!-- Blog -->
+            <li> <a href="javascript:void(0);"> 常见问题 </a>
+              
+            </li>
+            <!-- End Blog --> 
+            
+            <!-- Contacts -->
+            <li> <a href="javascript:void(0);"> 技术问答 </a>
+              
+            </li>
+            
+            <!-- End Contacts --> 
+            
+            <!-- Search Block -->
+            <li> <i class="search fa fa-search search-btn"></i>
+              <div class="search-open">
+                <div class="input-group animated fadeInDown">
+                  <input type="text" class="form-control" placeholder="Search">
+                  <span class="input-group-btn">
+                  <button class="btn-u" type="button">Go</button>
+                  </span> </div>
+              </div>
+            </li>
+            <!-- End Search Block -->
+          </ul>
+        </div>
+        <!--/navbar-collapse--> 
+      </div>
+    </div>
+    <!-- End Navbar --> 
+  </div>
+  <!--=== End Header ===--> 
+  
+  <!--=== Content Part ===-->
+  <div class="container content main">
+    <div class="row"> 
+      <!-- Begin Sidebar Menu -->
+      <div class="col-md-3">
+        <ul id="sidebar-nav" class="list-group sidebar-nav-v1">
+          <!-- Typography -->
+          <li class="list-group-item  active"> <a href="#" data-parent="#sidebar-nav" data-toggle="collapse">开发者指南</a> </li>
+          <!-- End Typography --> 
+          
+          <!-- Buttons UI -->
+          <li class="list-group-item"> <a href="#_1">基本观念</a>
+            <ul class="collapse in" id="collapse-buttons">
+              <li><a href="#_2">注册账号/操作员</a></li>
+              <li> <a href="#_3"> 空间</a> </li>
+              <li> <a href="#_4"> 访问域名</a> </li>
+              <li> <a href="#_5"> 缓存刷新</a> </li>
+              <li> <a href="#_6">图片处理</a></li>
+            </ul>
+          </li>
+          <!-- End Buttons UI --> 
+          
+          <!-- Icons -->
+          <li class="list-group-item"> <a href="#">服务方式</a>
+            <ul class="collapse in" id="collapse-icons">
+              <li> <a href="#_7">FTP</a> </li>
+              <li><a href="#_8">API</a></li>
+            </ul>
+          </li>
+          <!-- End Icons --> 
+          
+          <!-- Content Boxes -->
+          <li class="list-group-item active"> <a href="#collapse-typography" data-parent="#sidebar-nav" data-toggle="collapse">REST API 简易指南（PHP）</a> </li>
+          <!-- End Content Boxes -->
+          
+        </ul>
+      </div>
+      <!-- End Sidebar Menu --> 
+      
+      <!-- Begin Content -->
+      <div class="col-md-9"> 
+        <!-- Paragraph and Heading Examples -->
+        <div role="main" class="content-body">
+          <h1>开发者指南</h1>
+          <p>UPYUN 提供了丰富的 API 以及相关的 SDK 供开发者选择和使用，在使用这些资源之前，我们需要先对 UPYUN 产品做一些必要的了解，从而使得在实际操作过程中不会感到手足无措。</p>
+          <h2 id="_1">基本概念</h2>
+          <h3 id="_2">注册帐号/操作员</h3>
+          <p>「注册帐号」及其密码将作为 <a href="https://www.upyun.com/cp/#/login/">UPYUN 用户控制面板</a>的登录所用，您需要通过「注册帐号」在 <a href="https://www.upyun.com/cp/#/login/">UPYUN 用户控制面板</a>进行空间的新建，操作员授权，订单购买等操作。</p>
+          <p>「操作员」，顾名思义，是用来操作您的空间的，通过使用注册帐号登录<a href="https://www.upyun.com/cp/#/login/">UPYUN 用户控制面板</a>后，您可以创建多个操作员，满足不同的管理需求。</p>
+          <p>「操作员」需要被授权至某个空间，才能对该空间进行一些操作（如，上传，下载等）。帮助中心所涉及到的文档中，若无特殊说明，所指的「操作员」、「操作员名」均为已授权至相应空间的操作员。</p>
+          <h3 id="_3">空间</h3>
+          <p>在您使用注册帐号登录<a href="https://www.upyun.com/cp/#/login/">UPYUN 用户控制面板</a>后，您可以创建不同的空间以方便管理你的文件资源。</p>
+          <blockquote>
+            <p><strong>提示：</strong> 每个空间都可以授权多个操作员，相应的，每个操作员也可以被授权至多个空间</p>
+          </blockquote>
+          <p>UPYUN 目前有如下几种空间类型：</p>
+          <ul>
+            <li>普通文件类型空间：可以上传任意资源，资源将被保存至 UPYUN 的服务器。且文件的外链将具有 CDN 网络支持。</li>
+            <li>图片类型空间：仅允许上传图片类型的文件，较之普通的文件类型空间，图片类空间额外的提供了「自定义版本」功能，相应的，在 API 中，您也可将被允许使用「图片预处理」的相关功能，详情见 <a href="/api/">API 文档</a> 中相应参数。且文件的外链将具有 CDN 网络支持。</li>
+            <li>CDN 类型空间：分为<code>静态 CDN 空间</code>和<code>动态 CDN 空间</code>，CDN 空间文件全都存放在源站，拥有<code>自定义版本</code>功能,支持的文件大小为1~1024MB。</li>
+          </ul>
+          <h3 id="_4">访问域名</h3>
+          <p>「空间」创建完成后，系统会自动绑定一个默认域名<code>&lt;bucket&gt;.b0.upaiyun.com</code>。比如，当你创建了一个名叫<code>demo</code>的空间时，那系统会自动绑定默认域名<code>demo.b0.upaiyun.com</code>。因此，如果该空间根目录有一个名为 <code>file.txt</code> 的文件，那么，你可以使用 <code>http://demo.b0.uppaiyun.com/file.txt</code> 来访问。</p>
+          <p>若你拥有<strong>已备案</strong>的域名，则可以绑定自己的独立域名。绑定独立域名后，你可以同时使用默认域名，以及你绑定的域名来访问你的文件。</p>
+          <blockquote>
+            <p><strong>提示：</strong> 为了避免图片被盗链，可以根据实际需要，设置防盗链措施</p>
+          </blockquote>
+          <h3 id="_5">缓存刷新</h3>
+          <p>空间的文件出现变动（覆盖，删除）的时候，删除 CDN 外层节点旧的文件缓存。</p>
+          <h3 id="_6">图片处理</h3>
+          <h4 id="_7">自定义版本</h4>
+          <p>图片类型和 CDN 类型空间都具备有「自定义版本」功能：</p>
+          <ul>
+            <li>自定义版本提供「缩略图」，「水印」的设置。</li>
+            <li>调用格式为：「外链 + 间隔标识符 + 自定义版本号」</li>
+          </ul>
+          <p>例如：</p>
+          <pre class="prettyprint well prettyprinted" style=""><code><span class="pun">空间有自定义版本号名称为：</span><span class="pln"> </span><span class="pun">「</span><span class="lit">200</span><span class="pun">」，</span><span class="pln">
+</span><span class="pun">间隔标识符为：「!」，</span><span class="pln">
+</span><span class="pun">规则为「限定宽度，高度自适应」</span></code></pre>
+          <p>那么调用这个版本的缩略图为：</p>
+          <pre class="prettyprint well prettyprinted" style=""><code><span class="pln">http</span><span class="pun">:</span><span class="com">//demo.b0.upaiyun.com/img/upyun_test.jpg!200</span></code></pre>
+          <p>这是一个拥有宽度为 200px 的图片。</p>
+          <h4 id="api">API 图片预处理</h4>
+          <p>此外，您也可以选择在调用 API 的同时使用图片预处理的功能，如：</p>
+          <p>原图大小： 400x320</p>
+          <p><img src="http://our80.b0.upaiyun.com/wiki_pic/sample.jpg" alt="pic"></p>
+          <p>作图参数:</p>
+          <pre class="prettyprint well prettyprinted" style=""><code><span class="str">'x-gmkerl-type: fix_width'</span><span class="pun">,</span><span class="pln"> </span><span class="com">//限定宽度,高度自适应</span><span class="pln">
+</span><span class="str">'x-gmkerl-value: 200'</span><span class="pun">,</span><span class="pln">      </span><span class="com">//限定的宽度的值</span><span class="pln">
+</span><span class="str">'x-gmkerl-unsharp: true'</span><span class="pun">,</span><span class="pln">   </span><span class="com">//图片锐化</span></code></pre>
+          <p>作图参数在上传的时候传入，原图在空间会自动保存作图以后的图片。
+            上传后的图片大小:</p>
+          <p><img src="http://our80.b0.upaiyun.com/wiki_pic/pic.jpg" alt="pic"></p>
+          <p>具体 API 和参数的使用的方式，可以参考 <a href="/api/">API 文档</a></p>
+          <h2 id="_8">服务方式</h2>
+          <h3 id="_7">FTP</h3>
+          <p>UPYUN 额外提供了 FTP 的方式，以便用户可以更方便地对空间的资源进行管理。</p>
+          <p>使用方法如下：</p>
+          <ul>
+            <li>主机域名：
+              <ul>
+                <li>自动选择：v0.ftp.upyun.com</li>
+                <li>电信线路：v1.ftp.upyun.com</li>
+                <li>联通线路：v2.ftp.upyun.com</li>
+                <li>移动线路：v3.ftp.upyun.com</li>
+              </ul>
+            </li>
+            <li>用户名：<code>操作员名/空间名</code>，如：<code>operator/mybucket</code></li>
+            <li>密码：操作员的密码</li>
+            <li>端口：21</li>
+          </ul>
+          <blockquote>
+            <p><strong>注：</strong> 编码方式（字符集）：统一使用 UTF-8</p>
+          </blockquote>
+          <h3 id="_8">API</h3>
+          <p>除了使用简单的 FTP 的方式之外，UPYUN 还提供了多种不同的 API，方便在不同的编程环境下使用 UPYUN 的服务，其中包括：</p>
+          <ul>
+            <li><a href="/api/rest_api/">HTTP REST API</a>：该接口是基于标准 HTTP 协议的 API 接口，具备了文件资源的增删改查功能，建议在服务端使用</li>
+            <li><a href="/api/form_api/">表单 API</a>：表单 API 接口更适用于移动 App 开发，丰富的参数接口和回调机制能够直接将终端用户的文件上传至 UPYUN 服务器，而不需要经过客户自己的服务器，大大提高了处理速度和用户体验</li>
+            <li><a href="/api/multipart_upload/">分块上传 API</a>：在表单上传的基础上，在上传大文件的时候，面对有可能因为网络质量等其他原因而造成的上传失败，可以使用分块上传方式上传文件</li>
+            <li><a href="/api/purge/">缓存刷新 API</a>：该功能只适用于 CDN 用户或 CDN 类空间。当源服务器的资源发生变更后，可以调用该 API 接口告知 UPYUN 缓存刷新，从而达到外网访问时获取到的是最新的资源</li>
+            <li><a href="/api/av_pretreatment/">音视频预处理 API</a>：视频预处理接口是用于处理已经上传到对应存储空间中的视频文件，进行转码、截图等操作。在处理完成之后，异步通知用户处理结果</li>
+          </ul>
+        </div>
+        <div class="clearfix margin-bottom-40"></div>
+      </div>
+      <!-- End Content --> 
+    </div>
+  </div>
+  <!--/container--> 
+  <!-- End Content Part -->
+  <hr/>
+  <!--=== Footer Version 1 ===-->
+  <div class="footer">
+    <div class="copyright">
+      <div class="container">
+        <div class="row">
+          <!-- Social Links -->
+          <div class="col-md-9">
+            <ul class="footer-socials list-inline">
+              <li> <a href="#" class="tooltips  color-grey" data-toggle="tooltip" data-placement="top" title="" data-original-title="Facebook"> FAQ </a> </li>
+              <li> <a href="#" class="tooltips  color-grey" data-toggle="tooltip" data-placement="top" title="" data-original-title="Skype"> GitHub </a> </li>
+              <li> <a href="#" class="tooltips  color-grey" data-toggle="tooltip" data-placement="top" title="" data-original-title="Google Plus"> 技术问答 </a> </li>
+              <li> <a href="#" class="tooltips  color-grey" data-toggle="tooltip" data-placement="top" title="" data-original-title="Linkedin"> 加入我们 </a> </li>
+            </ul>
+          </div>
+          <div class="col-md-3"><p class="color-grey">© 2014 UPYUN
+</p></div>
+          <!-- End Social Links --> 
+        </div>
+      </div>
+    </div>
+    <!--/copyright--> 
+  </div>
+  <!--=== End Footer Version 1 ===--> 
+</div>
+<!--/wrapper--> 
+
+<!-- JS Global Compulsory --> 
+<script type="text/javascript" src="resource/vendor/jquery1.9.1/jquery-1.9.1.min.js"></script> 
+<script type="text/javascript" src="resource/vendor/jquery1.9.1/jquery-migrate.js"></script> 
+<script type="text/javascript" src="resource/vendor/bootstrap3.2/js/bootstrap.min.js"></script> 
+<!-- JS Implementing Plugins --> 
+<script type="text/javascript" src="resource/vendor/unify/plugins/back-to-top.js"></script> 
+<script type="text/javascript" src="resource/vendor/unify/plugins/flexslider/jquery.flexslider-min.js"></script> 
+<script type="text/javascript" src="resource/vendor/unify/plugins/parallax-slider/js/modernizr.js"></script> 
+<script type="text/javascript" src="resource/vendor/unify/plugins/parallax-slider/js/jquery.cslider.js"></script> 
+<!-- JS Customization --> 
+<script type="text/javascript" src="resource/vendor/unify/js/custom.js"></script> 
+<!-- JS Page Level --> 
+<script type="text/javascript" src="resource/vendor/unify/js/app.js"></script> 
+<script type="text/javascript" src="resource/vendor/unify/js/plugins/parallax-slider.js"></script> 
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+      	App.init();
+        App.initSliders();      
+        ParallaxSlider.initParallaxSlider();
+		 /*jQuery(window).scroll(function() {
+			
+			if (jQuery(window).scrollTop()>100){
+				jQuery("#sidebar-nav").addClass("menu");
+			}
+			else {
+				jQuery("#sidebar-nav").removeClass("menu");
+			}
+		});*/
+    });
+	
+</script> 
+<!--[if lt IE 9]>
+    <script src="resource/vendor/bootstrap3.2/js/respond.js"></script>
+    <script src="resource/vendor/bootstrap3.2/js/html5shiv.js"></script>
+    <script src="resource/vendor/bootstrap3.2/js/placeholder-IE-fixes.js"></script>
+<![endif]-->
+
+</body>
+</html>

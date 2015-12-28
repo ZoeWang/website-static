@@ -1,0 +1,13 @@
+
+
+@media (min-width:760px){ 
+.container{width:640px; min-width: 320px;}
+
+}
+.bottom-menu{ width:100%; height:60px; background:#F1F1F1; border-top:1px solid #aeaeae; position: fixed; left:0; bottom: -1px; z-index:10; padding:10px 0;}
+.shop-product{margin:0 0 50px 0;}
+.fa-shopping-cart{font-size: 24px; color:#999; margin:0 20px;}
+.content-md{padding:20px 0 90px;}
+.bottom-menu a{float:left;color:#666; width:25%;height:100%; border-right:1px solid #999; text-align: center; line-height: 36px;}
+.orderprice{width:200px; height:40px; background:#18ba9b; border:1px solid #fff; color:#fff;float:right; margin:10px 0;}
+.orderprice:hover{background:#2cd5b6; }

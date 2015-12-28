@@ -1,0 +1,162 @@
+<!DOCTYPE HTML> 
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		<title>根据不同设备加载不同样式和结构</title>
+		<style>
+		/*不管用*/
+		@media (min-device-width:600px) { 
+			img[data-src-600px] {
+				content: attr(data-src-600px, url);
+
+			}
+		}
+		@media (min-device-width:800px) {
+			img[data-src-800px] {
+				content: attr(data-src-800px, url);
+			}
+		}	
+		
+		</style>
+		<script type="text/javascript"> 
+		//判断不同设备，载入不同页面
+		// if(/AppleWebKit.*mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){ 
+		// 	if(window.location.href.indexOf("?mobile")<0){ 
+		// 		try{ 
+		// 			if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){ 
+		// 				window.location.href="pcmb.html"; 
+		// 			}else if(/iPad/i.test(navigator.userAgent)){ 
+		// 				window.location.href="login.html"; 
+		// 			}else{ 
+		// 				window.location.href="login.html" 
+		// 			} 
+		// 		}catch(e){} 
+		// 	} 
+		// } 
+		</script> 
+	</head>
+	<body>
+		<!--  -->
+		<img src="resource/frontend/images/1.jpg" data-src-800px="resource/frontend/images/2.jpg" alt="不成功">
+		<!--  -->
+
+		<h1>media query(媒体查询)</h1> 
+		<p>因为现在主流的智能终端都是基于iOS和Android的，而它们自带的浏览器都是基于webkit内核，所以我们可以完全使用viewport属性和media query技术实现网站的响应性：</p>
+		<pre>
+		&lt;meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"&gt;
+		</pre>
+		
+		<p>后面的initial-scale表示初始缩放，maximum-scale表示最大缩放比例，1意味着不能进行缩放。</p>
+
+		<pre>
+		/* for 240 px width screen */
+		@media only screen and (max-device-width:240px){
+		    selector{
+		    }
+		}
+		 
+		/* for 360px width screen */
+		@media only screen and (min-device-width:241px) and (max-device-width:360px){
+		    selector{
+		    }
+		}
+		 
+		/* for 480 px width screen */
+		@media only screen (min-device-width:361px)and (max-device-width:480px){
+		    selector{
+		    }
+		}
+
+		&lt;link rel="stylesheet" media="screen and (min-width: 800px)" href="main.css" /&gt;
+		@import url("main.css") screen and (min-width: 800px);
+		</pre>
+		<p>可把不同的屏幕大小的样式分别写入不同的css文件里。可建一个base.css 然后在里面写 根据不同的media  import不同的css样式表</p>
+
+
+		<h1>CSS3 image</h1>
+
+		<p>这个方法有些惊艳</p>
+		<p>我们都知道可以用::before和::after伪元素+content属性来动态显示一些内容或者做其它很酷的事情，而且在CSS 2.1中即被支持。不过content属性在CSS 2.1中只能用于这两个伪元素中，而在CSS3中，任何元素都可以使用content属性了，这个方法就是结合css3 的attr属性和HTML自定义属性的功能：</p>
+
+		<pre>
+		//测试不成功
+		&lt;img src="image.jpg" 
+			data-src-600px="image-600px.jpg" 
+			data-src-800px="image-800px.jpg" alt=""&gt;
+		</pre>
+
+		<p>然后用media query来动态赋值：</p>
+		<pre>
+		@media (min-device-width:600px) { 
+			img[data-src-600px] {
+				content: attr(data-src-600px, url); 
+			}
+		}
+		@media (min-device-width:800px) {
+			img[data-src-800px] {
+				content: attr(data-src-800px, url);
+			}
+		}	
+		</pre>
+
+		<p>当然，这种方法也有不足之处，比如PC端宽屏幕需要加载两个图片文件，然后我们也要为此准备多张图片文件等。</p>
+
+		
+        
+        <h1>视频</h1>
+        <pre>
+        
+
+		.video-container {
+		    position: relative;
+		    padding-bottom: 56.25%;
+		    padding-top: 30px;
+		    height: 0;
+		    overflow: hidden;
+		}
+		 
+		.video-container iframe,  
+		.video-container object,  
+		.video-container embed {
+		    position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		}
+        </pre>
+        在你的网站上应用了这些代码后，嵌入的视频也是响应式（Responsive）的了
+
+		
+		<h1>字体</h1>
+        <p>CSS3 规范引入了一个新的单位叫 rem，和 em 类相似，但相对于 HTML 元素来说， rem 更易于使用。rem 是相对于 HTML 元素的，不要忘了重置 HTML 的字体大小：</p>
+
+		<pre>
+		html { font-size:100%; } 
+		完成后，您可以定义响应式的字体大小，如下所示：
+		@media (min-width: 640px) { body {font-size:1rem;} } 
+		@media (min-width:960px) { body {font-size:1.2rem;} } 
+		@media (min-width:1100px) { body {font-size:1.5rem;} }
+　　	请注意，旧浏览器不支持 rem 单元，所以不要忘了实现一个替代。
+		</pre>
+
+		<h1>js 判断不同设备，载入不同页面</h1>
+　　	<pre>
+		if(/AppleWebKit.*mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){ 
+			if(window.location.href.indexOf("?mobile")&lt;0){ 
+				try{ 
+					if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){ 
+						window.location.href="pcmb.html"; 
+					}else if(/iPad/i.test(navigator.userAgent)){ 
+						window.location.href="login.html"; 
+					}else{ 
+						window.location.href="login.html" 
+					} 
+				}catch(e){} 
+			} 
+		} 
+		</pre>
+
+	</body>
+</html>

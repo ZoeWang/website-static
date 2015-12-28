@@ -1,0 +1,9 @@
+/* Add here all your css styles (customizations) */
+html{background:#fff;}
+body,h1,h2,h3,h4,h5,h6{font-family:"微软雅黑";}
+body{background:#fff;}
+.main {min-height:580px;}
+.block-grid-v1 {
+    background: none repeat scroll 0 0 #fdfefe;
+    border: 1px solid rgba(93, 96, 107, 0.15);
+}
